@@ -35,7 +35,7 @@ public class PopulationManager {
 		mostFitIndividual = population[0];
 		roundsWithSameMostFitIndividual = 0;
 		rounds = 0;
-		while(!endCondition()) { //rounds < 100
+		while(!endCondition()) { 
 			for(int i = 0; i < population.length; i++) {
 				Individual child = createNewIndividual(population[i]);
 				if(child.getFitness() < population[i].getFitness()) {
@@ -55,9 +55,6 @@ public class PopulationManager {
 		System.out.println("The most fit individual is:\n");
 		System.out.println(mostFitIndividual);
 	}
-	
-	
-	
 	
 	
 	private void generateStartingPopulation() {
@@ -84,7 +81,6 @@ public class PopulationManager {
 		
 		if(parent == mostFitIndividual && rnd.nextDouble() < 0.25) {
 			double optimalStepSize = GoldenRatioSearch.goldenRatioSearch(childDataPart1, childDataPart2);
-			//System.out.println("Optimal stepsize calucalted: " + optimalStepSize);
 			double[] childData = add(childDataPart1,multi(optimalStepSize, childDataPart2));
 			Individual child = new Individual(childData);
 			child.setStepSize(optimalStepSize);

@@ -9,11 +9,6 @@ import java.util.Random;
  * Using mutation and crossover on existing individuals in the population we generate new individuals.
  * The new individual will only replace its parent individual only if it's fitter than the parent individual.
  * 
- * Switch the fitnessFunction reference to try out different fitness-functions.
- * 
- * TODO: Päivitä kommentointia. 
- * 
- * 
  */
 
 

@@ -1,5 +1,13 @@
 package diff.evolution;
 
+
+/*
+ * Using the golden ratio search optimization method
+ * we determine the optimal stepsize in range[-1,1] 
+ * to be used in mutation. 
+ * 
+ */
+
 public class GoldenRatioSearch {
 	
 	private static Function fitnessFunction;
