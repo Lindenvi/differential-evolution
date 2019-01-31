@@ -68,7 +68,26 @@ public class PopulationManager {
 		return roundsWithSameMostFitIndividual > 30;
 	}
 	
-	
+	/*
+	 * Creating a new Individual is a process consisting of two phases: 
+	 * mutation and crossover. Mutation creates a random child using 
+	 * the parents stepsize. After mutation we crossover the random child 
+	 * with the parent.
+	 * 
+	 * Mutation:
+	 * We select randomly 3 Individuals from the current population 
+	 * and combine their datavectors as follows
+	 * c = x + F(y - z ), where x,y,z are datavectors of chosen Individuals 
+	 * and F is the parents stepsize. 
+	 * If the parent is currently the most fit Individual in the population
+	 * we sometimes use the Golden ratio search to locally optimize the 
+	 * stepsize for mutation. 
+	 * 
+	 * Crossover:
+	 * Using the parents crossoverrate we plant genes from the parents 
+	 * datavector to the child's datavector.
+	 * 
+	 */
 
 	
 	private Individual createNewIndividual(Individual parent) {

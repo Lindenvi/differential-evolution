@@ -4,7 +4,8 @@ package diff.evolution;
 /*
  * Using the golden ratio search optimization method
  * we determine the optimal stepsize in range[-1,1] 
- * to be used in mutation. 
+ * to be used in mutation. A negative stepsize essentially means 
+ * reversing the direction vector.
  * 
  */
 

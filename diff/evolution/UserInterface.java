@@ -1,6 +1,5 @@
 package diff.evolution;
 
-
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,6 +19,18 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
+/*
+ * A GUI for this project. User is able to switch between three different functions to optimize.
+ * Displays an image showing the function as a mathematical expression and the optimum solution(s).
+ * Start-button begins the optimization process. 
+ * Results display the most fit individual's genetic data and fitness.
+ * It also shows how many generations the search took.
+ * 
+ * The GUI could use some work and polish.
+ * 
+ */
+
 public class UserInterface extends Application{
 	
 	private PopulationManager pm = new PopulationManager();
@@ -36,9 +47,19 @@ public class UserInterface extends Application{
 		hbox.setStyle("-fx-background-color: #336699;");
 		bp.setBottom(hbox);
 		bp.setLeft(vbox);
+		bp.setStyle("-fx-background-color: #ffffff");
 		
 		Button btn = new Button("Begin!");
 		hbox.getChildren().add(btn);
+		
+		
+		/*
+		 * We set the camelback-function as a default choice when we start the application.
+		 * Each radiobutton contains the corresponding Function-object. When we choose 
+		 * for example the Ackley-button, the program sets the fitnessFunction reference
+		 * of the Individual-class to Ackley-function and so on.
+		 * 
+		 */
 		
 		ToggleGroup tg = new ToggleGroup();
 		RadioButton camelbackchoice = new RadioButton("Camelback-function");

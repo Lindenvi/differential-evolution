@@ -1,5 +1,10 @@
 package diff.evolution;
 
+/*
+ * A base class to make different functions.
+ * 
+ */
+
 public abstract class Function {
 		
 	
