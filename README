@@ -1,0 +1,6 @@
+A small optimization project combining differential evolution with local search.
+Differential evolution is a population based evolutionary algorithm capable of global optimization.
+We combine it with golden ratio search to achieve local optimization. The aim of this is to achieve faster convergence. 
+The program comes with a GUI and three different sample functions to optimize. 
+As this is a metaheuristic method it is not guaranteed that the method will always find the optimal solution. 
+Especially the Ackley-function is difficult. 
